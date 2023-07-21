@@ -1,0 +1,80 @@
+.home {
+  height: 100vh;
+  background-color: #ef6262;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". home-box ."
+    ". . .";
+}
+
+.home-box {
+  background-color: #f3aa60;
+  display: grid;
+  grid-auto-columns: 1fr; 
+  grid-template-rows: 0.5fr 1fr; 
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-area: home-box;
+  border-radius: 50px;
+}
+
+.home-title {
+    height: 30px;
+  grid-area: 1 / 1 / 2 / 2;
+  justify-self: center;
+  align-self: center;
+}
+
+.home-title h1{
+    color: #1D5B79;
+}
+
+.flags-box {
+    display: grid; 
+    grid-auto-columns: auto; 
+    grid-auto-rows: auto; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "flag-1 flag-2 flag-3"
+      "flag-4 flag-5 flag-6"
+      ". enter-button ."; 
+    justify-items: center; 
+    align-items: center; 
+    grid-area: 2 / 1 / 3 / 2; 
+}
+
+.flag{
+    width: 70px;
+}
+
+.enter-button {
+  grid-area: enter-button;
+}
+
+.flag-1 {
+    justify-self: end; 
+    grid-area: flag-1; 
+  }
+  .flag-2 { grid-area: flag-2; }
+  .flag-3 {
+    justify-self: start; 
+    grid-area: flag-3; 
+  }
+  .flag-4 {
+    justify-self: end; 
+    grid-area: flag-4; 
+  }
+  .flag-5 { grid-area: flag-5; }
+  .flag-6 {
+    justify-self: start; 
+    grid-area: flag-6; 
+  }

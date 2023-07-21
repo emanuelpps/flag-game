@@ -1,0 +1,162 @@
+.game {
+  height: 100vh;
+  min-height: 100vh;
+  background-color: #ef6262;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "points . life"
+    ". game-card ."
+    "go-back-button . next-button";
+}
+
+.game-card {
+  min-height: 100%;
+  background-color: #f3aa60;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 0.2fr 0.2fr 0.1fr 0.1fr  1fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". flag-query ."
+    ". question ."
+    ". . ."
+    ". answer-choice ."
+    ". button-check-container .";
+  grid-area: game-card;
+  border-radius: 50px;
+}
+
+.flag-query {
+  height: 100px;
+  justify-self: center;
+  align-self: center;
+  grid-area: flag-query;
+}
+
+.question {
+  height: 1;
+  grid-area: question;
+}
+
+.answer-choice {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 0.1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". answer ."
+    ". answer ."
+    ". answer ."
+    ". answer ."
+    ". . .";
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  grid-area: answer-choice;
+}
+.answer {
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "."
+    "."
+    "."
+    ".";
+  grid-area: answer;
+}
+.go-back-button {
+  display: grid;
+  width: 100%;
+  grid-area: go-back-button;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  justify-self: center;
+}
+.next-button {
+  grid-area: next-button;
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.button-check-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". button-check ."
+    ". . .";
+  grid-area: button-check-container;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+}
+.button-check {
+  justify-self: center;
+  align-self: center;
+  grid-area: button-check;
+}
+
+.points {
+  justify-self: center;
+  align-self: center;
+  grid-area: points;
+}
+.life {
+  justify-self: center;
+  align-self: center;
+  grid-area: life;
+}
+
+.list-answer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  align-self: center;
+  justify-items: center;
+}
+
+.label-font {
+  color: #468b97;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: max-content;
+}
+
+.titleGame{
+    color:#1D5B79;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.flag-query img{
+    width: 150px;
+    height: 100px;
+}
